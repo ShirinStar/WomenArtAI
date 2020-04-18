@@ -1,0 +1,304 @@
+/* color: 
+red_#EB3D60
+purpple: #AF70F7
+turkiz: #66DDBC
+redOrenge: #EB3B61
+
+*/
+html {
+  height:100%
+}
+
+body {
+  margin-top: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+  font: 14px "Lucida Grande", Helvetica, "Helvetica Neue", Lato, sans-serif;
+  background: linear-gradient( #EB3571, #EB3D60);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+.fix-nav{
+  display: flex;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding-top: 2%;
+  padding-left: 2%;
+  font-size: 14px;
+  letter-spacing: 2px;
+  z-index: 1; 
+}
+
+.nav-container {
+  position: absolute;
+  flex-direction: row;
+  position: absolute;
+  float: right;
+  width: 500px;
+  margin-left: 62%;
+}
+
+.aboutLink {
+  margin-left: 6%;
+  margin-right: 6%;
+  color: azure;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.aboutLink:hover {
+  color: black;
+}
+
+.joinLink {
+  margin-right: 2%;
+  color: azure;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.joinLink:hover {
+  color: black;
+}
+
+.memberLink {
+  color: azure;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.memberLink:hover {
+  color: black;
+}
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  margin-top: 43%;
+  position: relative; 
+}
+
+.protfolio-container {
+  width: 1100px;
+  height: 500px;
+  margin-top: auto;
+  position: absolute;
+  margin-left: 50%;
+  margin-top: -22%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 5px #f3a2ad1e; 
+}
+
+/* .titles {
+  z-index: 10;
+}   */
+
+.hero-title {
+  display: inline-block;
+  font-size: 100px;
+  padding-top: 0;
+  margin-left: 2%;
+  color: azure;
+}
+
+.join-us {
+  display: inline-block;  
+  text-align: right;
+  margin-top: 35%;
+  margin-left: 70%;
+  /* margin-right: -20%; */
+  font-size: 82px;
+  text-decoration: none;
+  font-family: "Lucida Grande";
+  font-weight: 800;
+  color: azure;
+  /* z-index: 1;   */
+}
+
+.join-us:hover {
+  color: #AF70F7;
+}
+
+.madeBy-div {
+  display: flex;
+}
+
+.made-by {
+  font-family: Helvetica;
+  font-size: 14px;
+  margin-left: 18%;
+  width: 200px;
+  color: rgb(148, 5, 84);
+  margin-top: -6%;
+}
+
+.member-list {
+  font-size: 5px;
+  opacity: 0;
+}
+
+.all-members {
+  display: flex;
+  margin-left: 5%;
+  position: relative;
+  flex-wrap: wrap;  
+}
+
+.member-div {
+  position: relative;
+  width: 400px;
+  /* border-style: solid;
+  border-color: black; */
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 1%;
+  padding-top:0;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  font-family: Helvetica;
+}
+
+.creator-img {
+  height: 150px;
+  margin-top: 5px;
+  border-radius: 80px;
+  opacity: 0.6;
+  margin-left: 28%;
+  border-color: #66DDBC;
+  border: solid;
+}
+
+.creator-img:hover{
+ opacity: 0.9;
+}
+
+.creator-name {
+  text-align: center;
+  font-size: 22px;
+  /* -webkit-text-stroke: 1px rgb(156, 26, 199); */
+  /* margin-bottom: 10px; */
+}
+
+.bio {
+  text-align: center;
+  max-width: 380px;
+  /* margin-top: -10%; */
+}
+
+.person-footer {
+  /* background-color: white; */
+  width: 300px;
+  max-height: 40px;
+}
+
+.links{
+margin-left: 45%;
+}
+
+.email {
+  max-height: 30px;
+  margin-right: 10%;
+}
+
+.email:hover {
+  box-shadow: 5px 5px 30px rgb(136, 240, 210); 
+}
+
+.website{
+  max-height: 30px;
+  margin-right: 10%;
+}
+
+.website:hover {
+  box-shadow: 5px 5px 30px rgb(136, 240, 210); 
+}
+
+.social {
+  max-height: 30px;
+}
+
+.social:hover {
+  box-shadow: 5px 5px 30px rgb(136, 240, 210); 
+}
+
+.aboutDiv {
+  display: flex;
+  margin-top: -1%;
+  position: relative;
+  width: 1100px;
+  margin-left: 8%;
+  margin-top: -5%;
+}
+
+.about-insideTitle {
+  display: inline-block;
+  font-size: 100px;
+  padding-top: 2%;
+  padding-bottom: 0;
+  /* margin-bottom: -1%; */
+  /* margin-top: 10%;  */
+  color: rgb(118, 244, 208);  
+}
+
+.about-cointainer {
+  background: linear-gradient( #EB3D60, #AF6FF7);
+  align-content: center;
+  border: solid;
+  border-color: rgba(240, 255, 255, 0.15);
+  padding-right: 5%;
+  margin-bottom: 3%;
+  margin-left: 15%;
+  margin-right: -15%;
+  margin-top: -1%;
+}
+
+.about-cointainerTwo {
+  align-content: center;
+  background: linear-gradient(#AF6FF7,  #EB3D60);
+  border: solid;
+  border-color: rgba(240, 255, 255, 0.15);
+  padding-right: 5%;
+  margin-bottom: 3%;
+  margin-left: 8%;
+  margin-right: -12%;
+}
+
+.about-text {
+  width: 980px;
+  position: relative;
+  font-size: 18px;
+  color: black;;
+  font-family: Helvetica;
+  padding: 1%;
+  padding-right:2%;
+  margin-top: 0;
+  margin-left: 5%;
+  line-height: 1.5;
+  letter-spacing: 1px;
+
+}
+
+.join-footer {
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  margin-top: 0;
+  padding: 1%;
+  margin-bottom: 0;
+  margin-right: 5%;
+  /* background-color: blue; */
+}
+
+.footer {
+  width: 100%;
+  background-color: blue;
+
+}
