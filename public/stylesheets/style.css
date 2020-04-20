@@ -1,23 +1,29 @@
 /* color: 
 red_#EB3D60
 purpple: #AF70F7
-turkiz: #66DDBC
+turkiz:#66DDBC
 redOrenge: #EB3B61
-
 */
-html {
-  height:100%
-}
 
 body {
   margin-top: auto;
   margin-left: auto;
-  width: 100%;
   height: 100%;
   font: 14px "Lucida Grande", Helvetica, "Helvetica Neue", Lato, sans-serif;
-  background: linear-gradient( #EB3571, #EB3D60);
   background-repeat: no-repeat;
   background-attachment: fixed; 
+	background: linear-gradient(to bottom,  #EB3571, #EB3D60,  #EB3571, #EB3D60, #AF70F7,  #66DDBC);
+	background-size: 100%;
+}
+
+body:before{
+	content:'';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+	background: linear-gradient(to right bottom, rgba(255,255,255,0.2) #EB3D60 75%);
 }
 
 .fix-nav{
@@ -94,10 +100,6 @@ body {
   box-shadow: 10px 10px 5px #f3a2ad1e; 
 }
 
-/* .titles {
-  z-index: 10;
-}   */
-
 .hero-title {
   display: inline-block;
   font-size: 100px;
@@ -111,7 +113,6 @@ body {
   text-align: right;
   margin-top: 35%;
   margin-left: 70%;
-  /* margin-right: -20%; */
   font-size: 82px;
   text-decoration: none;
   font-family: "Lucida Grande";
@@ -137,23 +138,25 @@ body {
   margin-top: -6%;
 }
 
+.divMembers{
+  display: flex;
+  justify-content: center;
+}
+
 .member-list {
-  font-size: 5px;
+  font-size: 15px;
   opacity: 0;
 }
 
 .all-members {
+  justify-content: center;
   display: flex;
-  margin-left: 5%;
-  position: relative;
   flex-wrap: wrap;  
 }
 
 .member-div {
   position: relative;
   width: 400px;
-  /* border-style: solid;
-  border-color: black; */
   margin-left: 2%;
   margin-right: 2%;
   padding: 1%;
@@ -180,18 +183,16 @@ body {
 .creator-name {
   text-align: center;
   font-size: 22px;
-  /* -webkit-text-stroke: 1px rgb(156, 26, 199); */
-  /* margin-bottom: 10px; */
 }
 
 .bio {
   text-align: center;
   max-width: 380px;
-  /* margin-top: -10%; */
+  line-height: 1.4;
+  
 }
 
 .person-footer {
-  /* background-color: white; */
   width: 300px;
   max-height: 40px;
 }
@@ -226,79 +227,60 @@ margin-left: 45%;
   box-shadow: 5px 5px 30px rgb(136, 240, 210); 
 }
 
+
 .aboutDiv {
   display: flex;
-  margin-top: -1%;
-  position: relative;
-  width: 1100px;
-  margin-left: 8%;
-  margin-top: -5%;
+  justify-content: center;
 }
 
 .about-insideTitle {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #66DDBC;
   display: inline-block;
-  font-size: 100px;
-  padding-top: 2%;
+  font-size: 5px;
+  padding-top: 20%;
   padding-bottom: 0;
-  /* margin-bottom: -1%; */
-  /* margin-top: 10%;  */
-  color: rgb(118, 244, 208);  
-}
-
-.about-cointainer {
-  background: linear-gradient( #EB3D60, #AF6FF7);
-  align-content: center;
-  border: solid;
-  border-color: rgba(240, 255, 255, 0.15);
-  padding-right: 5%;
-  margin-bottom: 3%;
-  margin-left: 15%;
-  margin-right: -15%;
-  margin-top: -1%;
-}
-
-.about-cointainerTwo {
-  align-content: center;
-  background: linear-gradient(#AF6FF7,  #EB3D60);
-  border: solid;
-  border-color: rgba(240, 255, 255, 0.15);
-  padding-right: 5%;
-  margin-bottom: 3%;
-  margin-left: 8%;
-  margin-right: -12%;
+  color: black;  
 }
 
 .about-text {
-  width: 980px;
+  background: rgba(255, 255, 255, 0.10);
+  width: 960px;
   position: relative;
   font-size: 18px;
   color: black;;
   font-family: Helvetica;
-  padding: 1%;
-  padding-right:2%;
-  margin-top: 0;
-  margin-left: 5%;
+  padding: 3%;
+  margin-top: 10%;
   line-height: 1.5;
   letter-spacing: 1px;
-
-}
-
-.join-footer {
-  display: block;
-  text-align: center;
-  font-size: 26px;
-  text-decoration: none;
-  font-weight: 600;
-  color: black;
-  margin-top: 0;
-  padding: 1%;
-  margin-bottom: 0;
-  margin-right: 5%;
-  /* background-color: blue; */
 }
 
 .footer {
   width: 100%;
-  background-color: blue;
-
+  padding-top: 5%;
+  text-align: center;
+  
 }
+
+.join-footer {
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 5%;
+}
+
+.join-footer:hover {
+  color: #EB3D60
+}
+
+.logo {
+  display: inline-block;
+  font-weight: 600;
+  color: #EB3D60;
+}
+

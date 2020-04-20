@@ -57,7 +57,6 @@ router.get('/', async function(req, res, next) {
     data: data,
     randPerson: randPerson
   });
-
 });
 
 module.exports = router;
