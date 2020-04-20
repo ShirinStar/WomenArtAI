@@ -17,7 +17,7 @@ window.addEventListener('scroll', function() {
     if (belowTop && !aboveBottom){
      title.innerHTML = 'MEMBERS';
      title.style.display = "inline-block";
-     nav.style.display = "none";
+    //  nav.style.display = "none";
     } else if(aboveTop && !belowAbove) {
       title.innerHTML = 'ABOUT';
       nav.style.display = "inline-block";
