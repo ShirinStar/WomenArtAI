@@ -17,17 +17,17 @@ window.addEventListener('scroll', function() {
     if (belowTop && !aboveBottom){
      title.innerHTML = 'MEMBERS';
      title.style.display = "inline-block";
-    //  nav.style.display = "none";
-    } else if(aboveTop && !belowAbove) {
+     nav.style.display = "inline-block";
+   } else if(aboveTop && !belowAbove) {
       title.innerHTML = 'ABOUT';
       nav.style.display = "inline-block";
       title.style.display = "inline-block";
-    } else {
+   } else {
      title.innerHTML = 'WOMEN ART AI';
      nav.style.display = "inline-block";
      title.style.display = "inline-block";
-    }
-  });
+   }
+ });
 
 // aboutLink.addEventListener('click', function(ev) {
 //     ev.preventDefault();
