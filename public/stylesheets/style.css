@@ -661,10 +661,10 @@ margin-left: 45%;
     margin-left: 57%;
   }
 
-  .protfolio-container {
-    height: calc(100vh - 650px);
+  /* .protfolio-container {
+    height: calc(100vh - 550px);
     margin-top: 10%;
-  }
+  } */
 
   .titles {
     margin-top: -12%;
