@@ -1,7 +1,7 @@
 <div >
-  <h1 class='member-list' id='members'>MEMBERS</h1>
+  <h1 class='member-list' id='members'></h1>
   <div class='all-members'>
-      <%for (let person of data){%> 
+      <%for (let person of randData){%> 
       <div class='member-div'>
         <div class='creator-container'>
           <a href="<%=person.site %>" target="_blank"><img class='creator-img' src= "<%=person.headshot%>" alt='creator-img'></a>

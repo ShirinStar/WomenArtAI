@@ -28,14 +28,3 @@ window.addEventListener('scroll', function() {
      title.style.display = "inline-block";
    }
  });
-
-// aboutLink.addEventListener('click', function(ev) {
-//     ev.preventDefault();
-//     //elem.style.display = "none";
-//     //heroDiv.style.display = "none";
-//     //aboutDiv.style.display = "block";
-//     // title.style.display = "none";
-//     // title.style.opacity = "0";
-//     //nav.style.position= "absolute";
-// })
- 

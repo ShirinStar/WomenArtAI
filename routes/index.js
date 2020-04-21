@@ -6,7 +6,6 @@ const readline = require('readline');
 const {google} = require('googleapis');
 const _ = require('lodash');
 
-url = 'https://randomuser.me/api/';
 SHEET_URL= 'https://sheets.googleapis.com/';
 
 const sheets = google.sheets({
@@ -40,7 +39,7 @@ router.get('/', async function(req, res, next) {
       const linkedin = person.Linkedin;
       return {name, email, headshot, bio, portfolio, site, linkedin}
     })
-    console.log(data);
+    let randData = _.shuffle(data);
 
      const samplePerson =  data.map(person => {
       const name = person.name;
@@ -48,13 +47,12 @@ router.get('/', async function(req, res, next) {
       const site = person.site;
       return {name, portfolio, site}
     })
-      let randPerson = _.sample(samplePerson)
-      console.log("randPerson", randPerson)
+      let randPerson = _.sample(samplePerson);
     
   res.render('index', {
     page: 'WOMEN ART AI', 
     menuId: 'home', 
-    data: data,
+    randData: randData,
     randPerson: randPerson
   });
 });
