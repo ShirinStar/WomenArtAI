@@ -708,11 +708,11 @@ margin-left: 45%;
 
 @media (max-width: 650px) {
   .nav-container {
-    margin-left: 45%;
+    margin-left: 40%;
   }
 
   .protfolio-container {
-    height: calc(100vh - 400px);
+    height: calc(100vh - 450px);
     margin-top: 10%;
   }
 
