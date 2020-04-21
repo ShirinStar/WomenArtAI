@@ -662,7 +662,7 @@ margin-left: 45%;
   }
 
   .protfolio-container {
-    height: calc(100vh - 750px);
+    height: calc(100vh - 650px);
     margin-top: 10%;
   }
 
@@ -712,7 +712,7 @@ margin-left: 45%;
   }
 
   .protfolio-container {
-    height: calc(100vh - 500px);
+    height: calc(100vh - 550px);
     margin-top: 10%;
   }
 
@@ -753,7 +753,6 @@ margin-left: 45%;
     padding-top: 20%;
     padding-bottom: 20%;
     padding-left: 8%;
-    padding-right: 8%;
     font-size: 12px;
   }
 }
