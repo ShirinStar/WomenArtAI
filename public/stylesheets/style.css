@@ -705,4 +705,54 @@ margin-left: 45%;
     font-size: 12px;
   }
 }
+
+@media (max-width: 650px) {
+  .nav-container {
+    margin-left: 57%;
+  }
+
+  .protfolio-container {
+    height: calc(100vh - 800px);
+    margin-top: 10%;
+  }
+
+  .titles {
+    margin-top: -12%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    margin-top: 20%;
+  }
+  
+  .join-us { 
+    font-size: 24px;
+  }
+
+  .madeBy-div {
+    margin-top: 7%;
+  }
+
+
+  .creator-img {
+    height: 100px;
+    margin-left: 33%;
+  }
+
+  .creator-name {
+    font-size: 16px;
+  }
+  
+  .person-footer {
+    width: 250px;
+    margin-left: -15%;
+  }
+
+  .about-text {
+    margin-top: 10%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    font-size: 12px;
+  }
+}
   
