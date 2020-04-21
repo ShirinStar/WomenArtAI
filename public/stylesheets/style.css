@@ -708,16 +708,16 @@ margin-left: 45%;
 
 @media (max-width: 650px) {
   .nav-container {
-    margin-left: 40%;
+    margin-left: 35%;
   }
 
   .protfolio-container {
-    height: calc(100vh - 450px);
+    height: calc(100vh - 500px);
     margin-top: 10%;
   }
 
   .titles {
-    margin-top: -12%;
+    margin-top: -10%;
   }
 
   .hero-title {
@@ -752,6 +752,8 @@ margin-left: 45%;
     margin-top: 10%;
     padding-top: 20%;
     padding-bottom: 20%;
+    padding-left: 8%;
+    padding-right: 8%;
     font-size: 12px;
   }
 }
