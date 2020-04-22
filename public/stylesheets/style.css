@@ -708,11 +708,16 @@ margin-left: 45%;
 
 @media (max-width: 650px) {
   .nav-container {
-    margin-left: 35%;
+    margin-left: 32%;
   }
 
+  .navbar {
+    font-size: 8px;
+    letter-spacing: 0;
+   }
+
   .protfolio-container {
-    height: calc(100vh - 550px);
+    height: calc(100vh - 500px);
     margin-top: 10%;
   }
 
@@ -721,7 +726,7 @@ margin-left: 45%;
   }
 
   .hero-title {
-    font-size: 32px;
+    font-size: 28px;
     margin-top: 20%;
   }
   
@@ -730,7 +735,7 @@ margin-left: 45%;
   }
 
   .madeBy-div {
-    margin-top: 6%;
+    margin-top: 7%;
   }
 
   .creator-img {
@@ -756,7 +761,7 @@ margin-left: 45%;
   }
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .navbar {
    font-size: 8px;
    letter-spacing: 0;
@@ -769,6 +774,6 @@ margin-left: 45%;
   .protfolio-container {
     height: calc(100vh - 450px);
   }
-}
+} */
 
   
