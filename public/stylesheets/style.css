@@ -708,7 +708,7 @@ margin-left: 45%;
 
 @media (max-width: 650px) {
   .nav-container {
-    margin-left: 32%;
+    margin-left: 0;
   }
 
   .navbar {
@@ -727,7 +727,7 @@ margin-left: 45%;
 
   .hero-title {
     font-size: 28px;
-    margin-top: 20%;
+    margin-top: 18%;
   }
   
   .join-us { 
@@ -735,7 +735,7 @@ margin-left: 45%;
   }
 
   .madeBy-div {
-    margin-top: 7%;
+    margin-top: 8%;
   }
 
   .creator-img {
@@ -758,6 +758,10 @@ margin-left: 45%;
     padding-bottom: 20%;
     padding-left: 8%;
     font-size: 12px;
+  }
+
+  .footer {
+    font-size: 10px;
   }
 }
 
