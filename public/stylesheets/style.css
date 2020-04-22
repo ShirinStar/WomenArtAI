@@ -739,8 +739,8 @@ margin-left: 45%;
   }
 
   .creator-img {
-    height: 100px;
-    margin-left: 33%;
+    height: 80px;
+    margin-left: 30%;
   }
 
   .creator-name {
@@ -761,6 +761,10 @@ margin-left: 45%;
   }
 
   .footer {
+    font-size: 10px;
+  }
+
+  .join-footer {
     font-size: 10px;
   }
 }
