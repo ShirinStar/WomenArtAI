@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "base64-img": "^1.0.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
@@ -14,8 +15,10 @@
     "express": "~4.16.1",
     "googleapis": "^39.2.0",
     "http-errors": "~1.6.3",
+    "image-data-uri": "^2.0.1",
     "lodash": "^4.17.15",
     "morgan": "~1.9.1",
+    "pg-promise": "^10.5.2",
     "three": "^0.115.0"
   }
 }
