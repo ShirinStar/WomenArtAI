@@ -1,9 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs');
-const image = require("image-data-uri");
-const axios = require('axios');
-const readline = require('readline');
 const {google} = require('googleapis');
 const _ = require('lodash');
 require('dotenv').config();
@@ -24,6 +20,9 @@ const getFile = async (id) => {
 const url = "https://drive.google.com/open?id=1-4p7GhCYHzx3YRkFewaTaKf_iIAQmQIg";
 const id = extractID(url);
 getFile(id);
+
+const urlSec = "https://drive.google.com/open?id=1rq3OtNBpg89UyzdY46QXqzZYOjEsOe-V";
+
 
 function extractID(urlString) { 
   const url = new URL(urlString)

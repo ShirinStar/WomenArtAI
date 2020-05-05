@@ -8,12 +8,12 @@ async function createDatabase() {
       CREATE TABLE people
       (
         user_id SERIAL PRIMARY KEY,
-        full_name TEXT UNIQUE,
+        name TEXT NOT NULL,
         headshot TEXT UNIQUE,
-        email TEXT UNIQUE, 
-        bio TEXT UNIQUE,
-        protfolio TEXT UNIQUE,
-        site TEXT UNIQUE, 
+        email TEXT UNIQUE NOT NULL, 
+        bio TEXT,
+        portfolio TEXT UNIQUE,
+        site TEXT, 
         linkedin TEXT UNIQUE
         )`,
         )} catch (e) {
@@ -35,7 +35,7 @@ async function save(person) {
   try {
     const saveData = await db.any(`
   INSERT INTO people
-  (full_name, headshot, email, bio, portfolio, site, linkedin)
+  (name, headshot, email, bio, portfolio, site, linkedin)
   VALUES (
     $1,
     $2,
@@ -60,6 +60,15 @@ async function save(person) {
   }
 }
 
+async function getEmails() {
+  try {
+    const emails = await db.any('select email from people');
+    return emails;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 module.exports = {
-  createDatabase, read, save
+  createDatabase, read, save, getEmails
 }
