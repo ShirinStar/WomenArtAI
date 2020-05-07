@@ -9,18 +9,17 @@ async function createDatabase() {
       (
         user_id SERIAL PRIMARY KEY,
         name TEXT NOT NULL,
-        headshot TEXT UNIQUE,
+        headshot TEXT,
         email TEXT UNIQUE NOT NULL, 
         bio TEXT,
-        portfolio TEXT UNIQUE,
+        portfolio TEXT,
         site TEXT, 
-        linkedin TEXT UNIQUE
+        linkedin TEXT
         )`,
         )} catch (e) {
     console.log(e);
   }
 }
-
 
 async function read() {
   try {
@@ -32,6 +31,9 @@ async function read() {
 }
 
 async function save(person) {
+  if (person === undefined) {
+    return;
+  }
   try {
     const saveData = await db.any(`
   INSERT INTO people
@@ -70,5 +72,8 @@ async function getEmails() {
 }
 
 module.exports = {
-  createDatabase, read, save, getEmails
+  createDatabase,
+  read,
+  save,
+  getEmails
 }

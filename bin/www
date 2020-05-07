@@ -4,6 +4,8 @@
  * Module dependencies.
  */
 var dotenv = require('dotenv');
+const {startJob} = require('../scheduled_import');
+startJob();
 
 dotenv.config();
 console.log(process.env.FOO)

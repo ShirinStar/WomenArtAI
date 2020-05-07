@@ -9,7 +9,6 @@ async function fetchSpreadSheetData() {
     auth: process.env.API_KEY
   });
 
-
   const params = {
     spreadsheetId: process.env.ANSWER_SHEET_ID,
     range: '!B:M'
@@ -27,32 +26,26 @@ async function fetchSpreadSheetData() {
 }
 
 const getFile = async (id) => {
-  const file = await drive.files.get({
-   fileId: id
-  })
-  return file
- };
-
- function extractID(urlString) { 
-  const url = new URL(urlString)
-  const id = url.searchParams.get('id')
-  return id;
-} 
-
-async function getThumbnail(url) {
   const drive = google.drive({
     auth: process.env.API_KEY,
-    version: 'v2'
+    version: 'v3'
   });
+  const file = await drive.files.get({
+    fileId: id,
+    fields: 'thumbnailLink'
+  })
+  return file
+};
 
-  const id = extractID(url);
-  const file = await getFile(id);
-  return file.data.thumbnailLink;
+function extractID(urlString) {
+  const url = new URL(urlString)
+  const id = url.searchParams.get('id')
+  console.log(id);
+  return id;
 }
 
 module.exports = {
   fetchSpreadSheetData,
-  getFile,
-  getThumbnail,
-  extractID
+  extractID,
+  getFile
 }
