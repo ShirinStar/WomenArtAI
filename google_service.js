@@ -28,7 +28,6 @@ async function fetchSpreadSheetData() {
 
 const getFile = async (id) => {
   const key = process.env.API_KEY;
-  debugger;
 
   const drive = google.drive({
     auth: process.env.API_KEY,
@@ -38,7 +37,7 @@ const getFile = async (id) => {
   const file = await drive.files.get({
     fileId: id,
     alt: 'media'
-  })//, { responseType: "arraybuffer"})
+  }, { responseType: "arraybuffer"})
   const buf = Buffer.from(file.data).toString('base64');
   return buf
 };
