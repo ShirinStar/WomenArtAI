@@ -1,7 +1,8 @@
 const { google } = require('googleapis');
 const key = process.env.API_KEY;
 SHEET_URL = 'https://sheets.googleapis.com/';
-
+require('dotenv').config();
+const fs = require('fs')
 
 async function fetchSpreadSheetData() {
   const sheets = google.sheets({
@@ -26,15 +27,20 @@ async function fetchSpreadSheetData() {
 }
 
 const getFile = async (id) => {
+  const key = process.env.API_KEY;
+  debugger;
+
   const drive = google.drive({
     auth: process.env.API_KEY,
     version: 'v3'
   });
+  
   const file = await drive.files.get({
     fileId: id,
-    fields: 'thumbnailLink'
-  })
-  return file
+    alt: 'media'
+  })//, { responseType: "arraybuffer"})
+  const buf = Buffer.from(file.data).toString('base64');
+  return buf
 };
 
 function extractID(urlString) {

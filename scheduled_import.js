@@ -18,6 +18,7 @@ function parsePersonData(person) {
 
 const scheduledImport = async function() {
   const personData = await fetchSpreadSheetData();
+  debugger
   const newPeople = await filterExistingPeople(personData)
   const filteredData = newPeople.filter(person => person['Overall Status'] === 'Complete');
 
@@ -31,15 +32,16 @@ const scheduledImport = async function() {
     const portfolioUrl = person.portfolio;
     const headshotId = extractID(url);
     const portfolioId = extractID(portfolioUrl);
-    const file = await getFile(headshotId);
-    const fileSec = await getFile(portfolioId);
-    const thumbnailLink = file.data.thumbnailLink;
-    const thumbnailLinkSec = fileSec.data.thumbnailLink;
+    const headshotImage = await getFile(headshotId);
+    const portfolioImage = await getFile(portfolioId);
+    const thumbnailLink = headshotImage;
+    const thumbnailLinkSec = portfolioImage;
     return {
       ...person, headshot: thumbnailLink, 
      portfolio:thumbnailLinkSec
     } 
   } catch (e) {
+    debugger
     console.error(e);
     return Promise.resolve(undefined)
   }
@@ -47,6 +49,7 @@ const scheduledImport = async function() {
   
   //save to db
   const data = await Promise.all(mappedData)
+  debugger
   console.log(data)
 
   const personPromises = data.filter(val =>  !!val)
@@ -65,9 +68,9 @@ function startJob() {
     scheduledImport();
   });
   console.log('timer did its job');
-  job.start();
+  // job.start();
 }
-
+scheduledImport();
 module.exports = {
   scheduledImport,
   startJob

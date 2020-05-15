@@ -4,7 +4,7 @@
       <%for (let person of randData){%> 
       <div class='member-div'>
         <div class='creator-container'>
-          <a href="<%=person.site %>" target="_blank"><img class='creator-img' src= "<%=person.headshot%>" alt='creator-img'></a>
+          <a href="<%=person.site %>" target="_blank"><img class='creator-img' src= "data:image/png;base64, <%=person.headshot%>" alt='creator-img'></a>
             <h2 class='creator-name'><%=person.name %></h2> 
             <div class='person-footer'> 
               <div class='links'>
