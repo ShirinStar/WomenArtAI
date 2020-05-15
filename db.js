@@ -1,5 +1,7 @@
 const pgp = require ('pg-promise');
-const db = pgp()({ host: 'localhost', database: 'womenai' })
+const db = pgp()(process.env.DATABASE_URL || {
+  host:'localhost', database: 'womenai'
+})
 
 
 async function createDatabase() {
