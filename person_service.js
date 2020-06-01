@@ -1,4 +1,4 @@
-const { getEmails } = require('./db')
+const { getEmails, getKeys } = require('./db')
 const _ = require('lodash');
 
 async function filterExistingPeople(personData) {
@@ -6,6 +6,14 @@ async function filterExistingPeople(personData) {
   const emails = existingEmails.map(emailObj => emailObj.email);
   return personData.filter(person => !_.includes(emails, person.email));
 }
+
+async function filterEventKey(eventData) {
+  const existEventKeys = await getKeys();
+  const keys =  existEventKeys.map(eventResult => eventResult.key);
+  return eventData.filter(event => !_.includes(keys, event.key))
+}
+
 module.exports = {
-  filterExistingPeople
+  filterExistingPeople,
+  filterEventKey
 }

@@ -4,26 +4,49 @@ SHEET_URL = 'https://sheets.googleapis.com/';
 require('dotenv').config();
 const fs = require('fs')
 
-async function fetchSpreadSheetData() {
+async function fetchMemberSheetData() {
   const sheets = google.sheets({
     version: 'v4',
     auth: process.env.API_KEY
   });
 
-  const params = {
-    spreadsheetId: process.env.ANSWER_SHEET_ID,
-    range: '!B:M'
+  const membersParams = {
+    spreadsheetId: process.env.ANSWER_SHEET_MEMBER_ID,
+    range: '!B:N'
   };
 
-  const sheetData = await sheets.spreadsheets.values.get(params)
-  const records = sheetData.data.values.slice(1).map(row => {
+  const memberSheetData = await sheets.spreadsheets.values.get(membersParams)
+  const records = memberSheetData.data.values.slice(1).map(row => {
     return row.reduce((person, cell, idx) => {
-      const key = sheetData.data.values[0][idx];
+      const key = memberSheetData.data.values[0][idx];
       person[key] = cell;
       return person;
     }, {});
   })
   return records;
+}
+
+
+async function fetchEventSheetData() {
+  const sheets = google.sheets({
+    version: 'v4',
+    auth: process.env.API_KEY
+  });
+
+  const eventsParams = {
+    spreadsheetId: process.env.ANSWER_SHEET_EVENT_ID,
+    range: '!A:I'
+  };
+
+  const eventSheetData = await sheets.spreadsheets.values.get(eventsParams)
+  const eventRecords = eventSheetData.data.values.slice(1).map(row => {
+    return row.reduce((event, cell, idx) => {
+      const key = eventSheetData.data.values[0][idx];
+      event[key] = cell;
+      return event;
+    }, {});
+  })
+  return eventRecords;
 }
 
 const getFile = async (id) => {
@@ -33,11 +56,11 @@ const getFile = async (id) => {
     auth: process.env.API_KEY,
     version: 'v3'
   });
-  
+
   const file = await drive.files.get({
     fileId: id,
     alt: 'media'
-  }, { responseType: "arraybuffer"})
+  }, { responseType: "arraybuffer" })
   const buf = Buffer.from(file.data).toString('base64');
   return buf
 };
@@ -50,7 +73,8 @@ function extractID(urlString) {
 }
 
 module.exports = {
-  fetchSpreadSheetData,
+  fetchMemberSheetData,
+  fetchEventSheetData,
   extractID,
   getFile
 }

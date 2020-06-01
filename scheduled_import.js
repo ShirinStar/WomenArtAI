@@ -1,8 +1,7 @@
 const CronJob = require('cron').CronJob;
-const { filterExistingPeople } = require('./person_service');
-const { fetchSpreadSheetData } = require('./google_service');
-const { getFile, extractID } = require('./google_service');
-const { save } = require ('./db');
+const { filterExistingPeople, filterEventKey } = require('./person_service');
+const { getFile, extractID, fetchMemberSheetData, fetchEventSheetData  } = require('./google_service');
+const { savePeople, saveEvent } = require ('./db');
 require('dotenv').config();
 
 function parsePersonData(person) {
@@ -10,14 +9,27 @@ function parsePersonData(person) {
   const email = person.email;
   const headshot = person['Headshot image'];
   const bio = person['Short Bio'];
-  const portfolio = person.Portfolio;
+  const portfolio = person['Image of work'];
   const site = person.Website;
   const linkedin = person.Linkedin;
   return { name, email, headshot, bio, portfolio, site, linkedin }
 }
 
+function parseEventData(event) {
+  const key = event.Timestamp;
+  const name = event.Name;
+  const email = event['Email Address'];;
+  const title = event['Title of event'];
+  const date = event['Date of event'];
+  const description = event['Short description'];
+  const link = event.Link;
+  return { key, name, email, title, date, description, link }
+}
+
 const scheduledImport = async function() {
-  const personData = await fetchSpreadSheetData();
+  const personData = await fetchMemberSheetData();
+  const eventData = await fetchEventSheetData();
+  console.log(eventData);
   const newPeople = await filterExistingPeople(personData)
   const filteredData = newPeople.filter(person => person['Overall Status'] === 'Complete');
 
@@ -44,11 +56,22 @@ const scheduledImport = async function() {
   }
   })
   
+  const approveEvent = await filterEventKey(eventData)
+  const filterEvent = approveEvent.filter(event => event['Overall Status'] === 'Complete');
+  const mappedEventData = filterEvent.map(event => {
+    return parseEventData(event)
+  })
+  
+ const eventPromises = mappedEventData.map(async (saveEventData) => {
+    await saveEvent(saveEventData);
+  })
+  await Promise.all(eventPromises);
+
   //save to db
   const data = await Promise.all(mappedData)
   const personPromises = data.filter(val =>  !!val)
   .map(async (savePersonData) => {
-    await save(savePersonData);
+    await savePeople(savePersonData);
   })
 
   await Promise.all(personPromises)
@@ -57,10 +80,11 @@ const scheduledImport = async function() {
 
 //cron timer
 function startJob() {
-  const job = new CronJob('0 0 * * * *', function() {
-    scheduledImport();
-  });
-  job.start();
+  // const job = new CronJob('0 0 * * * *', function() {
+  //   scheduledImport();
+  // });
+  // job.start();
+  scheduledImport();
 }
 
 module.exports = {

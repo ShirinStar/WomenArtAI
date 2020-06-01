@@ -21,18 +21,44 @@ async function createDatabase() {
         )} catch (e) {
     console.log(e);
   }
+  try {
+    await db.query(`
+      CREATE TABLE event
+      (
+        event_id SERIAL PRIMARY KEY,
+        key TEXT UNIQUE NOT NULL,
+        name TEXT NOT NULL,
+        email TEXT NOT NULL, 
+        title TEXT,
+        date TEXT,
+        description TEXT,
+        link TEXT
+        )`,
+        )} catch (e) {
+    console.log(e);
+  }
 }
 
-async function read() {
+async function readPeople() {
   try {
-    const data = await db.any('select * from people');
-    return data;
+    const dataPeople = await db.any('select * from people');
+    return dataPeople;
   } catch (e) {
     console.error(e);
   }
 }
 
-async function save(person) {
+async function readEvent() {
+  try {
+    const dataEvent = await db.any('select * from event');
+    return dataEvent;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+
+async function savePeople(person) {
   if (person === undefined) {
     return;
   }
@@ -64,6 +90,39 @@ async function save(person) {
   }
 }
 
+async function saveEvent(event) {
+  if (event === undefined) {
+    return;
+  }
+  try {
+    const saveData = await db.any(`
+  INSERT INTO event
+  (key, name, email, title, date, description, link)
+  VALUES (
+    $1,
+    $2,
+    $3, 
+    $4,
+    $5,
+    $6, 
+    $7
+  )`, [
+      event.key,
+      event.name,
+      event.email,
+      event.title,
+      event.date,
+      event.description,
+      event.link
+    ]
+    )
+    return saveData;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+
 async function getEmails() {
   try {
     const emails = await db.any('select email from people');
@@ -73,9 +132,21 @@ async function getEmails() {
   }
 }
 
+async function getKeys(){
+  try {
+    const keys = await db.any('select key from event');
+    return keys;
+  }catch (e) {
+    console.error(e);
+ }
+}
+
 module.exports = {
   createDatabase,
-  read,
-  save,
-  getEmails
+  readPeople,
+  savePeople,
+  readEvent,
+  saveEvent,
+  getEmails,
+  getKeys
 }
