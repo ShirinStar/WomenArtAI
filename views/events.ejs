@@ -1,7 +1,15 @@
 <div class='all-events'>
+  <div class='event-list'>
   <% for (let event of events){%> 
-    <p><%= event.title %></p>
-    <p><%= event.link %></p>
+    <div class="event-inner">
+    <h3 class='eventDate'> <%=event.date %> </h3>
+    <h3 class="eventTitle"><%= event.title %>｡</h3>
+    <p class='evenInfo'><%=event.description %></p>
+    <p class='evenInfo'>link: <a class='eventLink' href="<%= event.link %>" target="_blank"> <%= event.link %> </a> </p>
+    <p class='evenInfo'>contact
+      <a class='eventLink' href="<%=event.email %>" target="_blank"> <%=event.name %> </a> 
+    for more information. </p>
+    </div>
     <%}%>
-    <p>hi</p>
-  </div>
+</div>
+</div>

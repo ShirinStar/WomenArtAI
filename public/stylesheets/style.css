@@ -72,6 +72,65 @@ body:before{
   color: black;
 }
 
+.all-events{
+  display: flex;
+  /* background-color: white; */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  font-family: "Helvetica Neue", Lato;
+ 
+}
+.event-list{
+  display: block;
+  position: relative;
+  padding-left: 5%;
+}
+
+.eventLink {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.eventLink:hover {
+  background-color: black;
+}
+
+.eventDate{
+  letter-spacing: 4px;
+  background: #ffd9e5;
+  color: #E00E00;
+  padding: 5px 28px;
+  margin-top: 5%;
+  margin-left: -8%;
+  line-height: 28px;
+  position: absolute;
+  /* Rotate from top left corner (not default) */
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+.eventTitle {
+  padding-top: 2%;
+  font-size: 48px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #ffd9e5;
+  margin-left: 2%;
+  padding-bottom: 0%;
+  margin-bottom: 3%;
+}
+
+.evenInfo {
+  padding-top: 0%;
+  margin-top: 0%;
+  max-width: 420px;
+  font-size: 16px;
+  line-height: 1.2rem;
+}
+
 .memberLink {
   color: azure;
   text-decoration: none;
