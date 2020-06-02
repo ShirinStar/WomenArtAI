@@ -1,6 +1,7 @@
 <div class='all-events' id='news'>
-  <div class='event-list'>
+  
   <% for (let event of events){%> 
+    <div class='event-list'>
     <div class="event-inner">
     <h3 class='eventDate'> <%=event.date %> </h3>
     <h3 class="eventTitle"><%= event.title %>｡</h3>
@@ -10,6 +11,6 @@
       <a class='eventLink' href="<%=event.email %>" target="_blank"> <%=event.name %> </a> 
     for more information. </p>
     </div>
+  </div>
     <%}%>
-</div>
 </div>
