@@ -80,11 +80,11 @@ const scheduledImport = async function() {
 
 //cron timer
 function startJob() {
-  // const job = new CronJob('0 0 * * * *', function() {
-  //   scheduledImport();
-  // });
-  // job.start();
-  scheduledImport();
+  const job = new CronJob('0 0 * * * *', function() {
+    scheduledImport();
+  });
+  job.start();
+  // scheduledImport();
 }
 
 module.exports = {

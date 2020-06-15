@@ -6,8 +6,9 @@ redOrenge: #EB3B61
 */
 
 body {
-  margin-top: auto;
-  margin-left: auto;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   height: 100%;
   font: 14px "Lucida Grande", Helvetica, "Helvetica Neue", Lato, sans-serif;
   background-repeat: no-repeat;
@@ -46,7 +47,7 @@ body:before{
   position: absolute;
   float: right;
   width: 500px;
-  margin-left: 60%;
+  margin-left: 65%;
 }
 
 .newsLink {
@@ -83,22 +84,99 @@ body:before{
   color: black;
 }
 
+.memberLink {
+  color: azure;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.memberLink:hover {
+  color: black;
+}
+
+ .hero-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative; 
+  margin: 0 auto;
+  margin-right: 0;
+}
+
+.protfolio-container {
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: calc(100vh - 250px);
+  margin-top: 5%;
+  box-shadow: 10px 10px 5px #f3a2ad1e; 
+  overflow: hidden;
+	position: relative;
+} 
+
+.protfolio-container_glitch {
+  background-blend-mode: none;
+  background-color: transparent;
+  height: calc(100% + 5px * 2);
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  width: calc(100% + 10px * 2);
+}
+
+.protfolio-container,
+.protfolio-container_glitch {
+  background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.hero-title {
+  display: inline-block;
+  font-size: 100px;
+  padding-top: 0;
+  margin-left: 2%;
+  color: azure;
+}
+
+.titles {
+  display: inline-block;
+  text-align: right;
+  z-index: 1;
+  position: relative;
+  margin-top: -5%;
+}
+
+.madeBy-div {
+  display: flex;
+}
+
+.made-by {
+  position: relative;
+  font-family: Helvetica;
+  font-size: 14px;
+  margin-left: 10%;
+  width: 250px;
+  color: rgb(148, 5, 84);
+}
+
 .all-events{
-  display: flex; 
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-  /* background-color: white; */
+  justify-content: center;
 }
 
 .event-list {
-  /* for now-all the event section creates some padding in small screens */
+ justify-content: center;
+ display: flex;
  font-family: "Helvetica Neue", Lato;
- padding-bottom: 8%; 
- padding-top: 10%;
-/* max-width: 700px; */
- margin-left: 13%;
- margin-right: 10%;
+ padding-bottom: 2%; 
+ padding-top: 5%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 0;
+ flex-wrap: wrap;  
+  display: flex;
 }
 
 .event-inner{
@@ -134,120 +212,28 @@ body:before{
 
 .eventTitle {
   padding-top: 4%;
-  font-size: 38px;
+  font-size: 36px;
   letter-spacing: 6px;
   text-transform: uppercase;
   color: #ffd9e5;
-  margin-left: 2%;
   padding-bottom: 0%;
   margin-bottom: 3%;
   width: 320px;
+  margin-top: -2%;
 }
 
 .evenInfo {
   padding-top: 0%;
   margin-top: 0%;
-  width: 350px;
+  width: 450px;
   font-size: 16px;
   line-height: 1.2rem;
 }
 
-.memberLink {
-  color: azure;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.memberLink:hover {
-  color: black;
-}
-
- .hero-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  position: relative; 
-}
-
-.protfolio-container {
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 70%;
-  height: calc(100vh - 300px);
-  margin-top: 5%;
-  box-shadow: 10px 10px 5px #f3a2ad1e; 
-  overflow: hidden;
-	position: relative;
-} 
-
-.protfolio-container_glitch {
-  background-blend-mode: none;
-  background-color: transparent;
-  height: calc(100% + 5px * 2);
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  transform: translate3d(0, 0, 0);
-  width: calc(100% + 10px * 2);
-}
-
-.protfolio-container,
-.protfolio-container_glitch {
-  background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: cover;
-}
-
-.hero-title {
-  display: inline-block;
-  font-size: 100px;
-  padding-top: 0;
-  margin-left: 2%;
-  color: azure;
-}
-
-.titles {
-  /* display: inline-block; */
-  text-align: right;
-  z-index: 1;
-  position: relative;
-  margin-top: -5%;
-}
-
-.join-us {
-  margin-top: -5%;
-  margin-right: 10%;
-  display: inline-block;  
-  font-size: 72px;
-  text-decoration: none;
-  font-family: "Lucida Grande";
-  font-weight: 800;
-  color: azure;
-}
-
-.join-us:hover {
-  color: #AF70F7;
-}
-
-.madeBy-div {
-  display: flex;
-  margin-top: 4%;
-}
-
-.made-by {
-  position: relative;
-  font-family: Helvetica;
-  font-size: 14px;
-  margin-left: 18%;
-  width: 250px;
-  color: rgb(148, 5, 84);
-
-}
-
 .divMembers{
-  display: flex;
+  margin-right: auto;
   justify-content: center;
+  margin-left: 5%;
 }
 
 .member-list {
@@ -257,7 +243,6 @@ body:before{
 }
 
 .all-members {
-  justify-content: center;
   display: flex;
   flex-wrap: wrap;  
 }
@@ -265,8 +250,8 @@ body:before{
 .member-div {
   position: relative;
   width: 400px;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1%;
   padding-top:0;
   margin-bottom: 1%;
@@ -634,16 +619,48 @@ margin-left: 45%;
     }
   }
 
+
+
+
+
 /*media query*/
 
-  @media (max-width: 1500px) {
+@media (max-width: 1500px) {
+ .event-list {
+ padding-top: 4%;
+}
+
+.eventLink {
+ font-size: 16px;
+}
+
+.eventDate{
+ line-height: 28px;
+}
+
+.eventTitle {
+ font-size: 36px;
+ width: 320px;
+}
+
+.evenInfo {
+ width: 450px;
+ font-size: 16px;
+}
+
+.about-text {
+  margin-top: 5%;
+  }
+}
+
+@media (max-width: 1200px) {
   .navbar {
-    padding-top: 3%;
-    font-size: 12px;
+   padding-top: 3%;
+   font-size: 12px;
   }
 
   .nav-container {
-    margin-left: 60%;
+    margin-left: 58%;
   }
 
   .protfolio-container {
@@ -653,215 +670,225 @@ margin-left: 45%;
 
    .hero-title {
     font-size: 72px;
-    margin-top: 10%;
-  }
-  
-   .titles {
-    margin-top: -8%;
-  }
-  
-   .join-us { 
-    font-size: 48px;
-  }
-
-  .madeBy-div {
-    margin-top: 6%;
-  }
-
-  .made-by {
-    font-size: 10px;
-  }
-
-  .about-text {
-    margin-top: 5%;
-  }
-}
-
-@media (max-width: 1110px) {
-  .navbar {
-    padding-top: 3%;
-    font-size: 10px;
-  }
-
-  .nav-container {
-    margin-left: 57%;
-  }
-
-  .protfolio-container {
-    height: calc(100vh - 550px);
-    margin-top: 7%;
-  }
-
-   .hero-title {
-    font-size: 68px;
-    margin-top: 10%;
-  }
-  
-   .join-us { 
-    font-size: 42px;
-  }
-
-  .member-div {
-    margin-top: 3%;
-    width: 280px;
-    margin-left: 3%;
-  }
-
-  .creator-img {
-    height: 120px;
-    margin-left: 28%;
-  }
-
-  .creator-name {
-    font-size: 18px;
-  }
-
-  .bio {
-    font-size: 12px;
-    max-width: 280px;
-  }
-
-  .person-footer {
-    width: 250px;
-    margin-left: -15%;
-  }
-
-  .about-text {
-    margin-top: 4%;
-    width: 500px;
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 4%;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 770px) {
-  .nav-container {
-    margin-left: 57%;
-  }
-
-  /* .protfolio-container {
-    height: calc(100vh - 550px);
-    margin-top: 10%;
-  } */
-
-  .titles {
-    margin-top: -12%;
-  }
-
-  .hero-title {
-    font-size: 48px;
-    margin-top: 11%;
-  }
-  
-  .join-us { 
-    font-size: 32px;
-  }
-
-  .madeBy-div {
     margin-top: 8%;
   }
 
-
-  .creator-img {
-    height: 100px;
-    margin-left: 33%;
+  .made-by {
+   font-size: 11px;
+   margin-left: 8%;
   }
 
-  .creator-name {
-    font-size: 16px;
+  .event-list {
+    padding-top: 2%;
   }
-  
+    
+  .eventLink {
+   font-size: 12px;
+   padding: 2px;
+  }
+    
+  .eventDate{
+   line-height: 28px;
+   font-size: 18px;
+  }
+    
+  .eventTitle {
+   font-size: 32px;
+   width: 300px;
+  }
+    
+  .evenInfo {
+   width: 450px;
+   font-size: 12px;
+  }
+
+ .about-text {
+  margin-top: 5%;
+}
+
+ .member-div {
+  margin-top: 3%;
+  width: 280px;
+  margin-left: 3%;
+}
+
+ .creator-img {
+   height: 120px;
+   margin-left: 28%;
+}
+
+ .creator-name {
+   font-size: 18px;
+}
+
+ .bio {
+  font-size: 12px;
+  max-width: 280px;
+}
+
   .person-footer {
-    width: 250px;
-    margin-left: -15%;
-  }
+   width: 250px;
+   margin-left: -15%;
+}
 
-  .about-text {
-    margin-top: 10%;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    font-size: 12px;
+.about-text {
+  margin-top: 4%;
+  width: 500px;
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 4%;
+  font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+.protfolio-container {
+  height: calc(100vh - 450px);
+  margin-top: 7%;
+}
+
+.nav-container {
+  margin-left: 50%;
+}
+
+.hero-title {
+  font-size: 64px;
+  margin-top: 11%;
+}
+    
+.eventLink {
+  font-size: 12px;
+  padding: 2px;
+}
+    
+.eventDate{
+  line-height: 26px;
+  font-size: 16px;
+}
+    
+.eventTitle {
+  font-size: 26px;
+  width: 300px;
+}
+    
+  .evenInfo {
+  width: 320px;
+  font-size: 12px;
+}
+ 
+.creator-img {
+  height: 100px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.creator-name {
+  font-size: 16px;
+}
+  
+.person-footer {
+  width: 250px;
+}
+
+.about-text {
+  margin-top: 10%;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  font-size: 12px;
+}
+}
+
+@media (max-width: 750px) {
+.nav-container {
+  margin-left: 45%;
+}
+ .navbar {
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.event-list {
+  padding-top: 5%;
   }
 }
 
 @media (max-width: 650px) {
-  .nav-container {
-    margin-left: 25%;
-  }
-
-  .navbar {
-    font-size: 8px;
-    letter-spacing: 0;
-   }
-
-  .protfolio-container {
-    height: calc(100vh - 500px);
-    margin-top: 10%;
-  }
-
-  .titles {
-    margin-top: -10%;
-  }
-
-  .hero-title {
-    font-size: 28px;
-    margin-top: 18%;
-  }
-  
-  .join-us { 
-    display: none;
-  }
-
-  .madeBy-div {
-    margin-top: 8%;
-  }
-
-  .creator-img {
-    height: 80px;
-    margin-left: 33%;
-  }
-
-  .creator-name {
-    font-size: 16px;
-  }
-  
-  .person-footer {
-    width: 250px;
-    margin-left: -15%;
-  }
-
-  .about-text {
-    margin-top: 10%;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    padding-left: 8%;
-    font-size: 12px;
-  }
-
-  .footer {
-    font-size: 10px;
-  }
-
-  .join-footer {
-    font-size: 10px;
-  }
+.nav-container {
+  margin-left: 35%;
 }
 
-/* @media (max-width: 500px) {
-  .navbar {
-   font-size: 8px;
-   letter-spacing: 0;
-  }
-  
-  .nav-container {
-    margin-left: 30%;
+ .navbar {
+  font-size: 8px;
+  letter-spacing: 0;
   }
 
-  .protfolio-container {
-    height: calc(100vh - 450px);
+.protfolio-container {
+  height: calc(100vh - 500px);
+  margin-top: 10%;
+}
+
+ .titles {
+  margin-top: -10%;
+ }
+
+  .event-list {
+  padding-top: 8%;
+  margin-left: 10%;
+  padding-bottom: 8%;
+}
+
+.divMembers{
+  margin-left: 10%;
+}
+
+
+.member-div {
+  width: 450px;
+  margin-left: 10%;
+}
+
+.hero-title {
+  font-size: 42px;
+  margin-top: 18%;
+}
+
+.creator-img {
+  height: 80px;
+  margin-left: 25%;
+}
+
+.creator-name {
+  font-size: 16px;
+  margin-left: -30%;
+}
+
+.person-footer {
+  width: 250px;
+  margin-left: -8%;
+}
+
+.about-text {
+  margin-top: 10%;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 8%;
+  font-size: 12px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.join-footer {
+  font-size: 10px;
+}
+}
+
+@media (max-width: 550px) {
+.event-list {
+  margin-left: 15%;
+  padding-top: 10%;
   }
-} */
+}
 
   
