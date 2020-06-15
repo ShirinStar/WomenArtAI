@@ -139,7 +139,7 @@ body:before{
   padding-top: 0;
   margin-left: 2%;
   color: azure;
-  text-shadow: 2px 2px 4px #000000b9;
+  text-shadow: 2px 2px 4px rgba(235, 59, 97, 0.25);
 }
 
 .titles {
