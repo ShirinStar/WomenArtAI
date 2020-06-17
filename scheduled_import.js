@@ -18,7 +18,7 @@ function parsePersonData(person) {
 function parseEventData(event) {
   const key = event.Timestamp;
   const name = event.Name;
-  const email = event['Email Address'];;
+  const email = event['Email Address'];
   const title = event['Title of event'];
   const date = event['Date of event'];
   const description = event['Short description'];
@@ -29,7 +29,6 @@ function parseEventData(event) {
 const scheduledImport = async function() {
   const personData = await fetchMemberSheetData();
   const eventData = await fetchEventSheetData();
-  console.log(eventData);
   const newPeople = await filterExistingPeople(personData)
   const filteredData = newPeople.filter(person => person['Overall Status'] === 'Complete');
 

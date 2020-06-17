@@ -10,7 +10,9 @@
               <div class='links'>
                   <a href="mailto:<%=person.email %>" target="_blank"><img class='email' src="https://img.icons8.com/ios/50/000000/email-open.png"/></a>
                   <a href="<%=person.site %>" target="_blank"><img class='website' src="https://img.icons8.com/ios/50/000000/domain.png"/></a>
-                  <a href="<%=person.linkedin%>" target="_blank"><img class='social' src="https://img.icons8.com/ios/50/000000/linkedin.png"/></a>
+                  <%if (person.linkedin.length > 0) {%>
+                    <a href="<%=person.linkedin%>" target="_blank"><img class='social' src="https://img.icons8.com/ios/50/000000/linkedin.png"/></a>
+                  <%}%>
               </div>
               </div>
             <div class='bio'>
