@@ -629,7 +629,6 @@ body:before{
     }
   }
 
-///////////////////
 /*media query*/
 
 @media (max-width: 1500px) {
@@ -871,8 +870,8 @@ body:before{
   font-size: 12px;
 }
 
-.divMembers{
-  margin-left: 10%;
+.divMembers {
+  margin-left: 5%;
 }
 
 .member-div {
@@ -929,15 +928,13 @@ body:before{
     margin-left: 15%;
   }
 
-.creator-name {
- margin-left: -20%;  
-}
+  .creator-name {
+  margin-left: -20%;  
+  }
 
-.creator-img {
-  margin-left: 28%;
-}
-    
-  
+  .creator-img {
+    margin-left: 28%;
+  }
 }
 
   
