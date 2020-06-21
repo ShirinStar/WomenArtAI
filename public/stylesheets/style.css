@@ -260,6 +260,12 @@ body:before{
   font-family: Helvetica;
 }
 
+.creator-container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .creator-img {
   object-fit: cover;
   height: 150px;
@@ -267,7 +273,6 @@ body:before{
   margin-top: 5px;
   border-radius: 80px;
   opacity: 0.6;
-  margin-left: 27%;
   border-color: #66DDBC;
   border: solid;
 }
@@ -278,7 +283,6 @@ body:before{
 
 .creator-name {
   text-align: center;
-  margin-left: -10%;
   font-size: 22px;  
 }
 
@@ -291,18 +295,17 @@ body:before{
 .person-footer {
   width: 300px;
   max-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .links {
   display: flex;
-  margin-left: 20%;
   justify-content: space-evenly;
 }
 
 .email {
   max-height: 30px;
-  margin-left: auto;
-  margin-right: auto;
   }
 
 .email:hover {
@@ -311,8 +314,6 @@ body:before{
 
 .website {
   max-height: 30px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .website:hover {
@@ -321,8 +322,6 @@ body:before{
 
 .social {
   max-height: 30px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .social:hover {
@@ -709,21 +708,16 @@ body:before{
  .member-div {
   margin-top: 3%;
   width: 280px;
-  margin-left: 3%;
 }
 
  .creator-img {
    object-fit: cover;
    width: 120px;
    height: 120px;
-   margin-left: 28%;
 }
 
  .creator-name {
    font-size: 18px;
-}
-.links {
-  margin-left: 40%;
 }
 
  .bio {
@@ -731,9 +725,8 @@ body:before{
   max-width: 280px;
 }
 
-  .person-footer {
+ .person-footer {
    width: 250px;
-   margin-left: -15%;
 }
 
 .about-text {
@@ -777,12 +770,10 @@ body:before{
 }
     
 .evenInfo {
-  width: 260px;
+  width: 320px;
   font-size: 12px;
-}
-
-.link {
-  margin-left: 20%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .email {
@@ -801,8 +792,6 @@ body:before{
   object-fit: cover;
   width: 100px;
   height: 100px;
-  margin-left: 30%;
-  margin-right: 30%;
 }
 
 .creator-name {
@@ -830,19 +819,11 @@ body:before{
   letter-spacing: 0;
 }
 
-.event-list {
-  padding-top: 8%;
-  padding-bottom: 6%;
-}
-
-  .creator-name {
-    margin-left: 15%;
-  }
-
-  .member-div {
-    margin-left: auto;
-    margin-right: auto;
-  }
+ .event-list {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5%;
+ }
 }
 
 @media (max-width: 650px) {
@@ -851,7 +832,7 @@ body:before{
 }
 
  .navbar {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0;
   }
 
@@ -864,19 +845,10 @@ body:before{
   margin-top: -10%;
  }
 
-
-.evenInfo {
-  width: 260px;
-  font-size: 12px;
-}
-
-.divMembers {
-  margin-left: 5%;
-}
-
 .member-div {
-  width: 450px;
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3%;
 }
 
 .hero-title {
@@ -888,17 +860,14 @@ body:before{
   object-fit: cover;
   width: 80px;
   height: 80px;
-  margin-left: 25%;
 }
 
 .creator-name {
   font-size: 16px;
-  margin-left: -30%;
 }
 
 .person-footer {
   width: 250px;
-  margin-left: -8%;
 }
 
 .about-text {
@@ -925,15 +894,8 @@ body:before{
 
   .all-events {
     margin-right: auto;
-    margin-left: 15%;
-  }
-
-  .creator-name {
-  margin-left: -20%;  
-  }
-
-  .creator-img {
-    margin-left: 28%;
+    margin-left: 12%;
+    margin-top: 4%;
   }
 }
 
