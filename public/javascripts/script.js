@@ -9,8 +9,6 @@ const eventDiv = document.querySelector('.all-events');
 const hiddenEvents = document.querySelector('.hiddenEvent');
 const showMore = document.querySelector('.showMore');
 
-
-
 window.addEventListener('scroll', function() {
     let coords = elem.getBoundingClientRect();
     let coordsAbout = aboutDiv.getBoundingClientRect();
@@ -42,21 +40,16 @@ window.addEventListener('scroll', function() {
    }
  });
 
- const hide = hiddenEvents.style.display = "none";
+hiddenEvents.style.display = "none";
 
 function showHiddenEvents() {
- if(hide=="block")
- {
-  showMore.innerHTML = "Show more";
-  hiddenEvents.style.display = "none";
-
- }
-if(hide=="none")
-{
-  hiddenEvents.style.display = "block";
-  showMore.innerHTML = "Show less";
-
- }
+  if(hiddenEvents.style.display == "flex") {
+    hiddenEvents.style.display = "none";
+    showMore.innerHTML = "Show more events...";
+  } else {
+    hiddenEvents.style.display = "flex";
+    showMore.innerHTML = "Show less events";
+  }
 }
 
  showMore.addEventListener('click', showHiddenEvents)

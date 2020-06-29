@@ -64,9 +64,10 @@ const scheduledImport = async function() {
 
   await Promise.all(personPromises)
   const parsedEvents = eventData
+  
     .filter(event => event['Overall Status'] === 'Complete')
     .map(parseEventData)
-    
+    console.log("from scheduled", parseEventData)
   const mappedEventData = await filterEventKey(parsedEvents)
   
  const eventPromises = mappedEventData.map(async (saveEventData) => {

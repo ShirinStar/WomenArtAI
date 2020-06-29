@@ -1,7 +1,7 @@
 <div class='all-events' id='news'>
   <a  class='suggestEvent' href="https://docs.google.com/forms/d/1VDI1KRrtnyW1KQEEN1zJNdkcHzHvtT1_rtQZ-TDiTLc" target="_blank"> <strong> + </strong>suggest an event</a>
   
-  <% for (let event of events.slice(0,10)){%> 
+  <% for (let event of events.slice(0,6)){%> 
     <div class='event-list'>
     <div class="event-inner">
     <h3 class='eventDate'> <%=event.date %> </h3>
@@ -15,8 +15,6 @@
   </div>
     <%}%>
     
-    <a  id="showLess" class="showMore" href="#showMore">Show more</a>
-
   <div class="hiddenEvent">
   <% for (let event of events.slice(10,50)){%> 
     <div class='event-list'>
@@ -32,4 +30,6 @@
   </div>
     <%}%>
   </div>
+  <button class="showMore" >Show more events...</button>
+
 </div>
