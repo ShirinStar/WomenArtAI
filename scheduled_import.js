@@ -16,14 +16,15 @@ function parsePersonData(person) {
 }
 
 function parseEventData(event) {
-  const key = event.Timestamp;
+  const key = event['Timestamp'];
   const name = event.Name;
   const email = event['Email Address'];
   const title = event['Title of event'];
   const date = event['Date of event'];
-  const description = event['Short description'];
-  const link = event.Link;
-  return { key, name, email, title, date, description, link }
+  const totalTime = event['Total time of event']
+  const description = event['Short event description'];
+  const link = event['Event link'];
+  return { key, name, email, title, date, totalTime, description, link }
 }
 
 const scheduledImport = async function() {
@@ -54,18 +55,6 @@ const scheduledImport = async function() {
     return Promise.resolve(undefined)
   }
   })
-  
-  const approveEvent = await filterEventKey(eventData)
-  const filterEvent = approveEvent.filter(event => event['Overall Status'] === 'Complete');
-  const mappedEventData = filterEvent.map(event => {
-    return parseEventData(event)
-  })
-  
- const eventPromises = mappedEventData.map(async (saveEventData) => {
-    await saveEvent(saveEventData);
-  })
-  await Promise.all(eventPromises);
-
   //save to db
   const data = await Promise.all(mappedData)
   const personPromises = data.filter(val =>  !!val)
@@ -74,6 +63,17 @@ const scheduledImport = async function() {
   })
 
   await Promise.all(personPromises)
+  const parsedEvents = eventData
+    .filter(event => event['Overall Status'] === 'Complete')
+    .map(parseEventData)
+    
+  const mappedEventData = await filterEventKey(parsedEvents)
+  
+ const eventPromises = mappedEventData.map(async (saveEventData) => {
+    await saveEvent(saveEventData);
+  })
+  await Promise.all(eventPromises);
+
   return data;
 }
 
@@ -86,6 +86,11 @@ function startJob() {
   // scheduledImport();
 }
 
+function main() {
+  scheduledImport();
+}
+
+main()
 module.exports = {
   scheduledImport,
   startJob

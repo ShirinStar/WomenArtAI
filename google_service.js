@@ -35,7 +35,7 @@ async function fetchEventSheetData() {
 
   const eventsParams = {
     spreadsheetId: process.env.ANSWER_SHEET_EVENT_ID,
-    range: '!A:I'
+    range: '!A:J'
   };
 
   const eventSheetData = await sheets.spreadsheets.values.get(eventsParams)

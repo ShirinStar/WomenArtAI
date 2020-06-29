@@ -3,7 +3,6 @@ const db = pgp()(process.env.DATABASE_URL || {
   host:'localhost', database: 'womenai'
 })
 
-
 async function createDatabase() {
   try {
     await db.query(`
@@ -29,9 +28,10 @@ async function createDatabase() {
         key TEXT UNIQUE NOT NULL,
         name TEXT NOT NULL,
         email TEXT NOT NULL, 
-        title TEXT,
-        date TEXT,
-        description TEXT,
+        title TEXT NOT NULL,
+        date TEXT NOT NULL,
+        total_time TEXT NOT NULL,
+        description TEXT NOT NULL,
         link TEXT
         )`,
         )} catch (e) {
@@ -97,7 +97,7 @@ async function saveEvent(event) {
   try {
     const saveData = await db.any(`
   INSERT INTO event
-  (key, name, email, title, date, description, link)
+  (key, name, email, title, date, total_time, description, link)
   VALUES (
     $1,
     $2,
@@ -105,13 +105,15 @@ async function saveEvent(event) {
     $4,
     $5,
     $6, 
-    $7
+    $7,
+    $8
   )`, [
       event.key,
       event.name,
       event.email,
       event.title,
       event.date,
+      event.totalTime,
       event.description,
       event.link
     ]

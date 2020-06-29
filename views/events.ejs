@@ -1,16 +1,35 @@
 <div class='all-events' id='news'>
+  <a  class='suggestEvent' href="https://docs.google.com/forms/d/1VDI1KRrtnyW1KQEEN1zJNdkcHzHvtT1_rtQZ-TDiTLc" target="_blank"> <strong> + </strong>suggest an event</a>
   
-  <% for (let event of events){%> 
+  <% for (let event of events.slice(0,10)){%> 
     <div class='event-list'>
     <div class="event-inner">
     <h3 class='eventDate'> <%=event.date %> </h3>
     <h3 class="eventTitle"><%= event.title %>｡</h3>
+    <p class ="totalTime"> Duration: <%= event.totalTime %></p>
     <p class='evenInfo'><%=event.description %></p>
-    <p class='evenInfo'>link: <a class='eventLink' href="<%= event.link %>" target="_blank"> <%= event.link %> </a> </p>
-    <p class='evenInfo'>contact
-      <a class='eventLink' href="<%=event.email %>" target="_blank"> <%=event.name %> </a> 
-    for more information. </p>
+    <p class='evenInfo links'> Find more information in the
+    <a class='eventLink' href="<%= event.link %>" target="_blank"> Link of the event </a> or
+    contact <a class='eventLink' href="<%=event.email %>" target="_blank"> <%=event.name %> </a> </p>
     </div>
   </div>
     <%}%>
+    
+    <a  id="showLess" class="showMore" href="#showMore">Show more</a>
+
+  <div class="hiddenEvent">
+  <% for (let event of events.slice(10,50)){%> 
+    <div class='event-list'>
+    <div class="event-inner">
+    <h3 class='eventDate'> <%=event.date %> </h3>
+    <h3 class="eventTitle"><%= event.title %>｡</h3>
+    <p class ="totalTime"> Duration: <%= event.totalTime %></p>
+    <p class='evenInfo'><%=event.description %></p>
+    <p class='evenInfo links'> Find more information in the
+    <a class='eventLink' href="<%= event.link %>" target="_blank"> Link of the event </a> or
+    contact <a class='eventLink' href="<%=event.email %>" target="_blank"> <%=event.name %> </a> </p>
+    </div>
+  </div>
+    <%}%>
+  </div>
 </div>

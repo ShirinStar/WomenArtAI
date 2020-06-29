@@ -6,6 +6,10 @@ const aboutLink = document.querySelector('.aboutLink');
 const aboutDiv = document.querySelector('.aboutDiv');
 const heroDiv = document.querySelector('.hero-container');
 const eventDiv = document.querySelector('.all-events');
+const hiddenEvents = document.querySelector('.hiddenEvent');
+const showMore = document.querySelector('.showMore');
+
+
 
 window.addEventListener('scroll', function() {
     let coords = elem.getBoundingClientRect();
@@ -37,3 +41,22 @@ window.addEventListener('scroll', function() {
      title.style.display = "inline-block";
    }
  });
+
+ const hide = hiddenEvents.style.display = "none";
+
+function showHiddenEvents() {
+ if(hide=="block")
+ {
+  showMore.innerHTML = "Show more";
+  hiddenEvents.style.display = "none";
+
+ }
+if(hide=="none")
+{
+  hiddenEvents.style.display = "block";
+  showMore.innerHTML = "Show less";
+
+ }
+}
+
+ showMore.addEventListener('click', showHiddenEvents)

@@ -10,8 +10,11 @@ async function filterExistingPeople(personData) {
 async function filterEventKey(eventData) {
   const existEventKeys = await getKeys();
   const keys =  existEventKeys.map(eventResult => eventResult.key);
-  return eventData.filter(event => !_.includes(keys, event.key))
+  const existingEmails = await getEmails()
+  const memberEvents = eventData.filter(event => _.includes(_.map(existingEmails, "email"), event.email))
+  return memberEvents.filter(event => !_.includes(keys, event.Timestamp))
 }
+
 
 module.exports = {
   filterExistingPeople,
