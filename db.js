@@ -138,7 +138,7 @@ async function getKeys(){
   try {
     const keys = await db.any('select key from event');
     return keys;
-  }catch (e) {
+  } catch (e) {
     console.error(e);
  }
 }

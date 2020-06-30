@@ -15,21 +15,22 @@
   </div>
     <%}%>
     
-  <div class="hiddenEvent">
-  <% for (let event of events.slice(10,50)){%> 
-    <div class='event-list'>
-    <div class="event-inner">
-    <h3 class='eventDate'> <%=event.date %> </h3>
-    <h3 class="eventTitle"><%= event.title %>｡</h3>
-    <p class ="totalTime"> Duration: <%= event.totalTime %></p>
-    <p class='evenInfo'><%=event.description %></p>
-    <p class='evenInfo links'> Find more information in the
-    <a class='eventLink' href="<%= event.link %>" target="_blank"> Link of the event </a> or
-    contact <a class='eventLink' href="<%=event.email %>" target="_blank"> <%=event.name %> </a> </p>
+  <% for (let event of events.slice(6,50)){%> 
+    <div class='event-list hidden-event'>
+      <div class="event-inner">
+      <h3 class='eventDate'> <%=event.date %> </h3>
+      <h3 class="eventTitle"><%= event.title %>｡</h3>
+      <p class ="totalTime"> Duration: <%= event.totalTime %></p>
+      <p class='evenInfo'><%=event.description %></p>
+      <p class='evenInfo links'> Find more information in the
+      <a class='eventLink' href="<%= event.link %>" target="_blank"> Link of the event </a> or
+      contact <a class='eventLink' href="<%=event.email %>" target="_blank"> <%=event.name %> </a> </p>
     </div>
   </div>
     <%}%>
-  </div>
-  <button class="showMore" >Show more events...</button>
-
 </div>
+
+
+<% if(events.length > 6) { %>
+  <button class="showMore">Show more events...</button>
+<%}%>

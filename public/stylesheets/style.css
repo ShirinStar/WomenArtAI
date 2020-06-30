@@ -108,7 +108,7 @@ body:before{
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 150px);
   margin-top: 5%;
   box-shadow: 10px 10px 5px #f3a2ad1e; 
   overflow: hidden;
@@ -178,8 +178,7 @@ body:before{
 
 .showMore {
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 42%;
   margin-top: 4%;
   margin-bottom: 2%;
   background-color: #EB366E;
@@ -199,10 +198,8 @@ body:before{
   color: #66DDBC;
 }
 
-.hiddenEvent {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.hidden-event {
+  display: none;
 }
 
 .suggestEvent {
@@ -755,7 +752,7 @@ body:before{
   }
 
   .protfolio-container {
-    height: calc(100vh - 350px);
+    height: calc(100vh - 250px);
     margin-top: 7%;
   }
 
@@ -840,7 +837,7 @@ body:before{
 
 @media (max-width: 900px) {
 .protfolio-container {
-  height: calc(100vh - 450px);
+  height: calc(100vh - 250px);
   margin-top: 7%;
 }
 
@@ -859,7 +856,6 @@ body:before{
   font-size: 10px;
 }
 
-    
 .eventLink {
   font-size: 12px;
   padding: 2px;
@@ -950,7 +946,7 @@ body:before{
   }
 
 .protfolio-container {
-  height: calc(100vh - 500px);
+  height: calc(100vh - 300px);
   margin-top: 10%;
 }
 

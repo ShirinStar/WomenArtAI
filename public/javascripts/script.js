@@ -6,7 +6,6 @@ const aboutLink = document.querySelector('.aboutLink');
 const aboutDiv = document.querySelector('.aboutDiv');
 const heroDiv = document.querySelector('.hero-container');
 const eventDiv = document.querySelector('.all-events');
-const hiddenEvents = document.querySelector('.hiddenEvent');
 const showMore = document.querySelector('.showMore');
 
 window.addEventListener('scroll', function() {
@@ -40,16 +39,22 @@ window.addEventListener('scroll', function() {
    }
  });
 
-hiddenEvents.style.display = "none";
-
-function showHiddenEvents() {
-  if(hiddenEvents.style.display == "flex") {
-    hiddenEvents.style.display = "none";
+let showMoreText = true;
+ function showHiddenEvents() {
+  const hiddenEvents = document.querySelectorAll('.event-list.hidden-event');
+  hiddenEvents.forEach(element => {
+    if (showMoreText === true) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  })
+  if (!showMoreText) {
     showMore.innerHTML = "Show more events...";
   } else {
-    hiddenEvents.style.display = "flex";
     showMore.innerHTML = "Show less events";
   }
+  showMoreText = !showMoreText;
 }
 
  showMore.addEventListener('click', showHiddenEvents)

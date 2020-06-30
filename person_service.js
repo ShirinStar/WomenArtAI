@@ -12,10 +12,8 @@ async function filterEventKey(eventData) {
   const keys =  existEventKeys.map(eventResult => eventResult.key);
   const existingEmails = await getEmails()
   const memberEvents = eventData.filter(event => _.includes(_.map(existingEmails, "email"), event.email))
-  console.log("memberEvent", memberEvents)
   return memberEvents.filter(event => !_.includes(keys, event.Timestamp))
 }
-
 
 module.exports = {
   filterExistingPeople,
