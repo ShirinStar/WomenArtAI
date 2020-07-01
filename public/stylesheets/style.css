@@ -108,7 +108,7 @@ body:before{
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 200px);
   margin-top: 5%;
   box-shadow: 10px 10px 5px #f3a2ad1e; 
   overflow: hidden;
@@ -168,30 +168,31 @@ body:before{
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .all-events {
   flex-wrap: wrap;  
   display: flex;
   justify-content: center;
+  text-align: left;
 }
 
 .showMore {
   display: inline-block;
-  margin-left: 42%;
-  margin-top: 4%;
+  margin-top: 40px;
   margin-bottom: 2%;
   background-color: #EB366E;
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 4px;
-  /* box-shadow: 1px 1px; */
   border: none;
   border-radius: 5px;
   border-bottom: 2px solid #ffd9e598;
-  padding: 8px;
+  padding-bottom: 4px;
   font-family: 'Lato';
   outline: none;
+  z-index: 1000;
 }
 
 .showMore:hover {
@@ -205,8 +206,8 @@ body:before{
 .suggestEvent {
   display: inline-block;
   text-decoration: none;
-  margin-top: 4%;
-  margin-bottom: 2%;
+  margin-top: 15px;
+  margin-bottom: 15px;
   margin-left: 70%;
   font-size: 12px;
   letter-spacing: 4px;
@@ -440,7 +441,7 @@ body:before{
   font-family: 'Lato';
   padding: 2%;
   margin-top: 6%;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
   letter-spacing: 0.1rem;
 }
 
@@ -837,7 +838,7 @@ body:before{
 
 @media (max-width: 900px) {
 .protfolio-container {
-  height: calc(100vh - 250px);
+  height: calc(100vh - 350px);
   margin-top: 7%;
 }
 
@@ -848,6 +849,10 @@ body:before{
 .hero-title {
   font-size: 64px;
   margin-top: 11%;
+}
+
+.showMore {
+  font-size: 10px;
 }
 
 .suggestEvent {
@@ -913,9 +918,10 @@ body:before{
 
 .about-text {
   margin-top: 10%;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   font-size: 12px;
+  line-height: 1.2rem;
  }
 }
 
@@ -946,7 +952,7 @@ body:before{
   }
 
 .protfolio-container {
-  height: calc(100vh - 300px);
+  height: calc(100vh - 400px);
   margin-top: 10%;
 }
 
@@ -955,9 +961,7 @@ body:before{
  }
 
  .suggestEvent {
-  margin-bottom: 4%;
   margin-left: 50%;
-  font-size: 10px;
 }
 
 .member-div {
