@@ -472,6 +472,26 @@ body:before{
   color: #EB3D60;
 }
 
+.designBy {
+  text-align: center;
+  font-size: 12px;
+  font-family: Helvetica, sans-serif;
+  color: #AF70F7;
+  letter-spacing: 2px;
+  padding-top: 35px;
+  margin-top: 0;
+  padding-bottom: 20px;
+  line-height: 1.2rem;
+}
+
+.designBy.link {
+  text-decoration: none;
+}
+
+.designBy.link:hover {
+  color: #fff942;
+}
+
 /*glitch animation*/
 .protfolio-container:hover :nth-child(n+2) {
     animation-duration: 2s;
@@ -923,6 +943,10 @@ body:before{
   font-size: 12px;
   line-height: 1.2rem;
  }
+
+ .designBy {
+  letter-spacing: 1px;
+ }
 }
 
 @media (max-width: 750px) {
@@ -1003,6 +1027,13 @@ body:before{
 
 .join-footer {
   font-size: 10px;
+ }
+
+ .designBy {
+  font-size: 8px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  padding-bottom: 15px;
  }
 }
 
