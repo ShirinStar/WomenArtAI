@@ -27,32 +27,61 @@ body:before{
 	background: linear-gradient(to right bottom, rgba(255,255,255,0.2) #EB3D60 75%);
 }
 
-.fix-nav{
-  display: flex;
+.topnav {
+  overflow: hidden;
+  margin-left: 5px;
 }
 
-.navbar {
+.topnav a {
+  float: left;
+  display: block;
+  color: azure;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
+.topnav a.active {
+  border-bottom: 2px solid #66DDBC;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+/*.fix-nav{
+  display: flex;
+}*/
+
+/*.navbar {
   display: inline-block;
   position: fixed;
   width: 100%;
   padding-top: 2%;
   padding-right: 20px;
-  /* padding-left: 20px; */
   font-size: 14px;
   letter-spacing: 2px;
   z-index: 1; 
+}*/
 
-}
-
-.nav-container {
+/*.nav-container {
   justify-content: space-between;
-  /* flex-direction: row; */
+  flex-direction: row; 
   float: right;
   max-width: 600px;
   margin-right: 20px;
-}
+}*/
 
-.navlink {
+/*.navlink {
   color: azure;
   text-decoration: none;
   font-weight: 600;
@@ -62,7 +91,7 @@ body:before{
 
 .navlink:hover {
   color: black;
-}
+}*/
 
  .hero-container {
   display: flex;
@@ -78,7 +107,7 @@ body:before{
   flex-wrap: wrap;
   width: 100%;
   height: calc(100vh - 200px);
-  margin-top: 5%;
+  margin-top: 2%;
   box-shadow: 10px 10px 5px #f3a2ad1e; 
   overflow: hidden;
 	position: relative;
@@ -104,12 +133,14 @@ body:before{
 }
 
 .hero-title {
+  position: fixed;
   display: inline-block;
   font-size: 100px;
   padding-top: 0;
   margin-left: 2%;
   color: azure;
   text-shadow: 2px 2px 4px rgba(235, 59, 97, 0.25);
+  z-index: 5;
 }
 
 .titles {
@@ -739,7 +770,7 @@ body:before{
 
   .protfolio-container {
     height: calc(100vh - 250px);
-    margin-top: 7%;
+    margin-top: 4%;
   }
 
    .hero-title {
@@ -824,7 +855,7 @@ body:before{
 @media (max-width: 900px) {
 .protfolio-container {
   height: calc(100vh - 350px);
-  margin-top: 7%;
+  margin-top: 4%;
 }
 
 .hero-title {
@@ -931,7 +962,7 @@ body:before{
 
 .protfolio-container {
   height: calc(100vh - 400px);
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
  .titles {
@@ -1000,6 +1031,30 @@ body:before{
     margin-right: auto;
     margin-left: 12%;
     margin-top: 4%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+   
   }
 }
 

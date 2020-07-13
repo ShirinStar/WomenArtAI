@@ -8,6 +8,16 @@ const heroDiv = document.querySelector('.hero-container');
 const eventDiv = document.querySelector('.all-events');
 const showMore = document.querySelector('.showMore');
 
+function myFunction() {
+  console.log('click')
+ let x = document.getElementById("myTopnav");
+ if (x.className === "topnav") {
+   x.className += " responsive";
+ } else {
+   x.className = "topnav";
+ }
+}
+
 window.addEventListener('scroll', function() {
     let coords = elem.getBoundingClientRect();
     let coordsAbout = aboutDiv.getBoundingClientRect();
@@ -56,5 +66,5 @@ let showMoreText = true;
   }
   showMoreText = !showMoreText;
 }
-
  showMore.addEventListener('click', showHiddenEvents)
+
