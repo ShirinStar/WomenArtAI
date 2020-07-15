@@ -34,7 +34,7 @@ const eventData = await readEvent();
    console.log(events)
 
   res.render('index', {
-    page: 'WOMEN ART AI',
+    page: 'WOMXN ART AI',
     menuId: 'home',
     randData,
     randPerson,

@@ -7,16 +7,9 @@ const aboutDiv = document.querySelector('.aboutDiv');
 const heroDiv = document.querySelector('.hero-container');
 const eventDiv = document.querySelector('.all-events');
 const showMore = document.querySelector('.showMore');
+const toggle = document.querySelector('.toggle');
+const menu = document.querySelector(".menu");
 
-function myFunction() {
-  console.log('click')
- let x = document.getElementById("myTopnav");
- if (x.className === "topnav") {
-   x.className += " responsive";
- } else {
-   x.className = "topnav";
- }
-}
 
 window.addEventListener('scroll', function() {
     let coords = elem.getBoundingClientRect();
@@ -43,7 +36,7 @@ window.addEventListener('scroll', function() {
       nav.style.display = "inline-block";
       title.style.display = "inline-block";
    } else {
-     title.innerHTML = 'WOMEN ART AI';
+     title.innerHTML = 'WOMXN ART AI';
      nav.style.display = "inline-block";
      title.style.display = "inline-block";
    }
@@ -68,3 +61,14 @@ let showMoreText = true;
 }
  showMore.addEventListener('click', showHiddenEvents)
 
+
+function myFunction() {
+  console.log('click')
+  let item = document.querySelector(".item");
+  
+ if (item.classList.contains("active")) {
+  item.classList.remove("active")
+ } else {
+  item.classList.add("active") 
+  }
+}
