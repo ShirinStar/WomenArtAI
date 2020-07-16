@@ -71,11 +71,12 @@ ul {
 }
 
 .menu li{
-  padding: 20px 10px;
+  padding: 0px 10px;
 }
 
 .menu {
   display: flex;
+  min-height: 70px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -88,14 +89,13 @@ ul {
 .item {
   order:2;
   display: none;
-  position: absolute;
   height: 100%;
   top:0;
   left: 50px;
   z-index: 10;
 }
 
-.item.active {
+.menu.active .item {
   display: block;
 }
 

@@ -64,11 +64,11 @@ let showMoreText = true;
 
 function myFunction() {
   console.log('click')
-  let item = document.querySelector(".item");
-  
- if (item.classList.contains("active")) {
-  item.classList.remove("active")
- } else {
-  item.classList.add("active") 
+  const menu = document.querySelector('.menu');
+
+  if (menu.classList.contains('active')) {
+    menu.classList.remove('active');
+  } else {
+    menu.classList.add('active');
   }
 }
