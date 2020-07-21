@@ -18,7 +18,7 @@
     "googleapis": "^39.2.0",
     "http-errors": "~1.6.3",
     "image-data-uri": "^2.0.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.27.0",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.4",
