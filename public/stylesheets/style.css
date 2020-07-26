@@ -370,7 +370,7 @@ ul {
   padding-top:0;
   margin-bottom: 1%;
   margin-top: 1%;
-  font-family: Helvetica;
+  font-family: 'Helvetica';
 }
 
 .creator-container {
@@ -396,8 +396,10 @@ ul {
 
 .creator-name {
   text-align: center;
-  font-size: 22px;  
+  font-size: 18px;  
   padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-family: "Lato";
 }
 
 .bio {
@@ -468,11 +470,11 @@ ul {
   position: relative;
   font-size: 16px;
   color: black;;
-  font-family: 'Lato';
+  font-family: 'Helvetica';
   padding: 2%;
   margin-top: 6%;
   line-height: 1.6rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1.5px;
 }
 
 .footer {
