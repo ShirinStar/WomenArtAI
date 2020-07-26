@@ -109,6 +109,7 @@ ul {
   height: 2px;
   width: 18px;
   position: relative;
+  margin-right: 4px;
 }
 
 .bars::before,.bars::after{
@@ -185,8 +186,8 @@ ul {
 
 .made-by {
   position: relative;
-  font-family: 'Lato';
-  font-size: 14px;
+  font-family: 'Helvetica';
+  font-size: 12px;
   margin-left: 5%;
   padding-top: 5px;
   width: 250px;
@@ -807,7 +808,7 @@ ul {
   }
 
   .made-by {
-   font-size: 11px;
+   font-size: 10px;
    margin-left: 8%;
   }
 
@@ -883,7 +884,6 @@ ul {
 @media (max-width: 900px) {
 .hero-title {
   font-size: 66px;
-  /* margin-top: 6%; */
 }
 
 .showMore {
@@ -1054,7 +1054,6 @@ ul {
   .link {
     padding: 0;
     font-size: 9px;
-    /* border-bottom: 1px solid #66DDBC; */
   }
 
   .menu li{
@@ -1063,11 +1062,10 @@ ul {
 
   .link.join {
     padding-left: 6px;
-    /* border: none; */
+}
 }
 
 @media all and (min-width: 768px) {
-
   .item {
     display: block;
     width: auto;
@@ -1109,8 +1107,8 @@ ul {
   line-height: 1.5rem;
   display: inline-block;
   }
-
   .hero-title {
     margin-top: 10%;
   }
-}
+ }
+
