@@ -144,7 +144,7 @@ ul {
   flex-wrap: wrap;
   width: 100%;
   height: calc(100vh - 200px);
-  margin-top: 2%;
+  margin-top: 15px;
   box-shadow: 10px 10px 5px #f3a2ad1e; 
   overflow: hidden;
 	position: relative;
@@ -801,6 +801,7 @@ ul {
 @media (max-width: 1200px) {
   .protfolio-container {
     height: calc(100vh - 250px);
+    margin-top: 10px;
   }
 
    .hero-title {
@@ -883,6 +884,7 @@ ul {
 }
 
 @media (max-width: 900px) {
+ 
 .hero-title {
   font-size: 66px;
 }
