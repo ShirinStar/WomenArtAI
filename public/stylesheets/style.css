@@ -9,6 +9,7 @@ redOrenge: #EB3B61
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 body {
@@ -61,7 +62,7 @@ ul {
 }
 
 .link.join {
-  padding: 5px 11px;
+  padding: 6px 12px;
   border: 1px solid #66DDBC;
   border-radius: 50em;
 }
@@ -71,7 +72,7 @@ ul {
 }
 
 .menu li{
-  padding: 0px 10px;
+  padding: 0px 12px;
 }
 
 .menu {
@@ -1053,16 +1054,16 @@ ul {
 
   .link {
     padding: 0;
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .menu li{
-    padding: 6px 6px;
+    padding: 0 6px;
   }
 
   .link.join {
-    padding-left: 6px;
-}
+    padding: 0.2rem 0.22rem;
+ }
 }
 
 @media all and (min-width: 768px) {
