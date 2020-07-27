@@ -90,6 +90,8 @@ ul {
 
 .functionToggle {
  padding: 2px 4px;
+ text-decoration: none;
+ outline: none;
 }
 
 .item {
@@ -1051,7 +1053,7 @@ ul {
 
 @media (max-width: 500px) {
   .protfolio-container {
-    height: calc(100vh - 250px);
+    height: calc(100vh - 300px);
     margin-top: 2px;
   }
 
