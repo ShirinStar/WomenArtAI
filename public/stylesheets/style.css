@@ -85,6 +85,11 @@ ul {
 .toggle {
   order: 1;
   margin-top: -10px;
+  cursor: pointer;
+}
+
+.functionToggle {
+ padding: 2px 4px;
 }
 
 .item {
@@ -100,17 +105,12 @@ ul {
   display: block;
 }
 
-.toggle {
- cursor: pointer;
-}
-
 .bars {
   background-color: #66DDBC;
   display: inline-block;
   height: 2px;
   width: 18px;
   position: relative;
-  margin-right: 4px;
 }
 
 .bars::before,.bars::after{
@@ -1050,6 +1050,11 @@ ul {
 }
 
 @media (max-width: 500px) {
+  .protfolio-container {
+    height: calc(100vh - 250px);
+    margin-top: 2px;
+  }
+
   .hero-title {
     font-size: 36px;
   }
@@ -1060,7 +1065,7 @@ ul {
   }
 
   .menu li{
-    padding: 0 6px;
+    padding: 0 5px;
   }
 
   .link.join {
