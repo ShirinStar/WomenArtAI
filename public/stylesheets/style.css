@@ -39,8 +39,14 @@ body:before{
   background:#AF70F7;
 }
 
+.fix-nav{
+  box-shadow: none;
+  border: none;
+}
+
 nav {
   padding: 5px 15px;
+  box-shadow: none;
 }
 
 ul {
@@ -139,6 +145,8 @@ ul {
   position: relative; 
   margin: 0 auto;
   margin-right: 0;
+  background-image: linear-gradient(to bottom, #EB3571, #EB3D60);
+  background-image:-webkit-linear-gradient(to bottom, #EB3571, #EB3D60);
 }
 
 .protfolio-container {
@@ -147,14 +155,13 @@ ul {
   width: 100%;
   height: calc(100vh - 200px);
   margin-top: 15px;
-  box-shadow: 10px 10px 5px #f3a2ad1e; 
+  box-shadow: none; 
   overflow: hidden;
-	position: relative;
+  position: relative;
 } 
 
 .protfolio-container_glitch {
   background-blend-mode: none;
-  background-color: transparent;
   height: calc(100% + 5px * 2);
   left: 0;
   pointer-events: none;
@@ -162,6 +169,7 @@ ul {
   top: 0;
   transform: translate3d(0, 0, 0);
   width: calc(100% + 10px * 2);
+  background: #EB3D60;
 }
 
 .protfolio-container,
@@ -178,7 +186,7 @@ ul {
   padding-top: 0;
   margin-left: 5%;
   color: azure;
-  text-shadow: 2px 2px 4px rgba(235, 59, 97, 0.25);
+  text-shadow: 2px 2px 4px rgba(235, 59, 97, 0.4);
   z-index: 5;
   margin-top: 2%;
 }
