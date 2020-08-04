@@ -12,6 +12,10 @@ redOrenge: #EB3B61
   outline: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   font: 14px "Lucida Grande", Helvetica, "Helvetica Neue", 'Lato', sans-serif;

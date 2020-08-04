@@ -36,7 +36,7 @@ window.addEventListener('scroll', function() {
       title.innerHTML = 'ABOUT';
       title.style.display = "inline-block";
    } else {
-     title.innerHTML = 'WOMEN ART AI';
+     title.innerHTML = 'WOMEN+ ART AI';
      title.style.display = "inline-block";
    }
  });
