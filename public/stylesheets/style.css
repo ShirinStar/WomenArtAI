@@ -56,7 +56,7 @@ ul {
 .link {
   color: azure;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 2px;
   display: block;
@@ -78,7 +78,7 @@ ul {
 }
 
 .menu li{
-  padding: 0px 12px;
+  padding: 0px 10px;
 }
 
 .menu {
@@ -95,25 +95,27 @@ ul {
 }
 
 .functionToggle {
- padding: 2px 4px;
+ /* padding: 2px 4px; */
  text-decoration: none;
  outline: none;
 }
-
+/*here item display none or block if we have bars on mobile*/
 .item {
   order:2;
-  display: none;
+  display: block;
   height: 100%;
   top:0;
-  left: 50px;
+  /* left: 50px; */
   z-index: 10;
+  margin-right: 2px;
+  margin-left: 2px;
 }
 
 .menu.active .item {
   display: block;
 }
 
-.bars {
+/* .bars {
   background-color: #66DDBC;
   display: inline-block;
   height: 2px;
@@ -132,11 +134,11 @@ ul {
 
 .bars::before{
   top: 5px;
-}
+} */
 
-.bars::after{
+/* .bars::after{
   top: -5px;
-}
+} */
 
  .hero-container {
   display: flex;
@@ -398,12 +400,12 @@ ul {
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 80px;
-  opacity: 0.6;
+  opacity: 0.9;
   border: 1px solid #66DDBC;
 }
 
 .creator-img:hover {
- opacity: 0.9;
+ opacity: 0.6;
 }
 
 .creator-name {
@@ -1075,11 +1077,11 @@ ul {
   }
 
   .menu li{
-    padding: 0 5px;
+    padding: 0 6px;
   }
 
   .link.join {
-    padding: 0.2rem 0.22rem;
+    padding: 0.2rem 0.23rem;
  }
 }
 
