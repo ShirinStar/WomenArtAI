@@ -5,6 +5,9 @@ require('dotenv').config();
 const fs = require('fs')
 
 async function fetchMemberSheetData() {
+  try {
+
+  
   const sheets = google.sheets({
     version: 'v4',
     auth: process.env.API_KEY
@@ -24,10 +27,16 @@ async function fetchMemberSheetData() {
     }, {});
   })
   return records;
+} catch (e) {
+  console.log(e);
+}
 }
 
 
 async function fetchEventSheetData() {
+  try {
+
+  
   const sheets = google.sheets({
     version: 'v4',
     auth: process.env.API_KEY
@@ -47,9 +56,13 @@ async function fetchEventSheetData() {
     }, {});
   })
   return eventRecords;
+} catch(e) { console.log(e)}
 }
 
 const getFile = async (id) => {
+  try {
+
+  
   const key = process.env.API_KEY;
 
   const drive = google.drive({
@@ -63,6 +76,9 @@ const getFile = async (id) => {
   }, { responseType: "arraybuffer" })
   const buf = Buffer.from(file.data).toString('base64');
   return buf
+} catch(e) { 
+  debugger;
+  console.log(e); }
 };
 
 function extractID(urlString) {
