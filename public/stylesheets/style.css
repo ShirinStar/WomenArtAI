@@ -463,6 +463,14 @@ ul {
   filter: invert(1);
 }
 
+.instasocial {
+  max-height: 30px;
+}
+
+.instasocial:hover {
+  filter: invert(1);
+}
+
 .aboutDiv {
   display: flex;
   justify-content: center;
@@ -955,6 +963,10 @@ ul {
 }
 
 .social {
+  max-height: 20px;
+}
+
+.instasocial {
   max-height: 20px;
 }
 

@@ -15,7 +15,8 @@ async function createDatabase() {
         bio TEXT,
         portfolio TEXT,
         site TEXT, 
-        linkedin TEXT
+        linkedin TEXT,
+        instagram TEXT
         )`,
         )} catch (e) {
     console.log(e);
@@ -65,7 +66,7 @@ async function savePeople(person) {
   try {
     const saveData = await db.any(`
   INSERT INTO people
-  (name, headshot, email, bio, portfolio, site, linkedin)
+  (name, headshot, email, bio, portfolio, site, linkedin, instagram)
   VALUES (
     $1,
     $2,
@@ -73,7 +74,8 @@ async function savePeople(person) {
     $4,
     $5,
     $6,
-    $7
+    $7,
+    $8
   )`, [
       person.name,
       person.headshot,
@@ -81,7 +83,8 @@ async function savePeople(person) {
       person.bio,
       person.portfolio,
       person.site,
-      person.linkedin
+      person.linkedin,
+      person.instagram
     ]
     )
     return saveData;

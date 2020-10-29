@@ -15,7 +15,7 @@ async function fetchMemberSheetData() {
 
   const membersParams = {
     spreadsheetId: process.env.ANSWER_SHEET_MEMBER_ID,
-    range: '!B:N'
+    range: '!B:O'
   };
 
   const memberSheetData = await sheets.spreadsheets.values.get(membersParams)
@@ -77,7 +77,7 @@ const getFile = async (id) => {
   const buf = Buffer.from(file.data).toString('base64');
   return buf
 } catch(e) { 
-  debugger;
+  console.log('got a problem');
   console.log(e); }
 };
 

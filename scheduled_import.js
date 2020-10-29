@@ -12,7 +12,8 @@ function parsePersonData(person) {
   const portfolio = person['Image of work'];
   const site = person.Website;
   const linkedin = person.Linkedin;
-  return { name, email, headshot, bio, portfolio, site, linkedin }
+  const instagram = person.Instagram;
+  return { name, email, headshot, bio, portfolio, site, linkedin, instagram }
 }
 
 function parseEventData(event) {
@@ -32,7 +33,6 @@ const scheduledImport = async function() {
   const eventData = await fetchEventSheetData();
   const newPeople = await filterExistingPeople(personData)
   const filteredData = newPeople.filter(person => person['Overall Status'] === 'Complete');
-
   const mappedData =  filteredData.map(person => {
     return parsePersonData(person)
   })

@@ -6,6 +6,7 @@ const { readPeople, readEvent } = require('../db');
 /* GET home page. */
 router.get('/', async function (req, res, next) {
 const personData = await readPeople();
+debugger;
 const eventData = await readEvent();
   let randData = _.shuffle(personData);
   const samplePerson = personData.map(person => {
