@@ -1,5 +1,8 @@
 const pgp = require ('pg-promise');
-const db = pgp({ ssl: null })((process.env.DATABASE_URL + "?ssl=true") || {
+pgp.pg.defaults.ssl = true;
+
+
+const db = pgp()((process.env.DATABASE_URL + "?ssl=true") || {
   host:'localhost', database: 'womenai'
 })
 
