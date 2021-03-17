@@ -9,7 +9,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "base64-img": "^1.0.4",
     "cookie-parser": "~1.4.4",
     "cron": "^1.8.2",
