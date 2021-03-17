@@ -1,5 +1,8 @@
 const pgp = require ('pg-promise');
-
+var dotenv = require('dotenv');
+dotenv.config();
+const url = process.env.DATABASE_URL;
+debugger;
 const db = pgp({
   // enable ssl for heroku
   connect: (client, dc, useCount) => {
