@@ -1,9 +1,10 @@
 const pgp = require ('pg-promise');
 
-
 const db = pgp({
-  ssl: {
-    rejectUnauthorized: false
+  // enable ssl for heroku
+  connect: (client, dc, useCount) => {
+    client.ssl = true;
+    client.connectionParameters.ssl
   }
 })((process.env.DATABASE_URL) || {
   host:'localhost', database: 'womenai'

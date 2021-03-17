@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "debug": "node --inspect-brk ./bin/www",
-    "clean": "psql -d womenai -c 'delete from people;'"
+    "clean": "psql -d womenai -c 'delete from people;'",
+    "test": "node test.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
