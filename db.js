@@ -1,17 +1,20 @@
 const pgp = require ('pg-promise');
 var dotenv = require('dotenv');
 dotenv.config();
-const url = process.env.DATABASE_URL;
-debugger;
-const db = pgp({
-  // enable ssl for heroku
-  connect: (client, dc, useCount) => {
-    client.ssl = true;
-    client.connectionParameters.ssl
+const config = {
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
   }
-})((process.env.DATABASE_URL) || {
-  host:'localhost', database: 'womenai'
-})
+}
+let db;
+if (process.env.DATABASE_URL) {
+  db = pgp()(config)
+} else {
+  db = pgp()({
+    host:'localhost', database: 'womenai'
+  });
+} 
 
 async function createDatabase() {
   try {
